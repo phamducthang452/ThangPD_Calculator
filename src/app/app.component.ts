@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Calculator';
+  number1 = 0;
+  number2 = 0;
+  operator = '';
+  result = 0;
+
+  calculator() {
+    if (this.operator === '+'){
+      this.result  = this.number1 + this.number2;
+    }else if (this.operator === '-'){
+      this.result  = this.number1 - this.number2;
+    }else if (this.operator === '*'){
+      this.result  = this.number1 * this.number2;
+    }else if (this.operator === '/'){
+      this.result  = this.number1 / this.number2;
+    }
+  }
 }
